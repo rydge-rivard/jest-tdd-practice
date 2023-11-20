@@ -1,4 +1,4 @@
-import { sum, capitalize, reverseStr } from "./index.js";
+import { sum, capitalize, reverseStr, calculator } from "./index.js";
 
 test("adds 1 + 2 to equal 3", () => {
   expect(sum(1, 2)).toBe(3);
@@ -24,4 +24,20 @@ test("reverse string with multiple words", () => {
 
 test("reverse string with capital letters", () => {
   expect(reverseStr("Rydge test")).toMatch(/tset egdyR/);
+});
+
+test("add two numbers", () => {
+  expect(calculator.add(1, 1)).toBe(2);
+});
+
+test("subtract two numbers", () => {
+  expect(calculator.sub(1, 1)).toBe(0);
+});
+
+test("multiply two numbers", () => {
+  expect(calculator.multiply(2, 2)).toBe(4);
+});
+
+test("divide two numbers", () => {
+  expect(calculator.divide(4, 2)).toBe(2);
 });

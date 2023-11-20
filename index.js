@@ -1,4 +1,4 @@
-export { sum, capitalize, reverseStr };
+export { sum, capitalize, reverseStr, calculator };
 
 function sum(a, b) {
   return a + b;
@@ -12,3 +12,13 @@ function capitalize(str) {
 function reverseStr(str) {
   return str.split("").reverse().join("");
 }
+
+function Calculator() {
+  function add(x, y) {
+    return x + y;
+  }
+
+  return { add };
+}
+
+const calculator = Calculator();
