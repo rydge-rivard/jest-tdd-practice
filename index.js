@@ -18,7 +18,19 @@ function Calculator() {
     return x + y;
   }
 
-  return { add };
+  function sub(x, y) {
+    return x - y;
+  }
+
+  function multiply(x, y) {
+    return x * y;
+  }
+
+  function divide(x, y) {
+    return x / y;
+  }
+
+  return { add, sub, multiply, divide };
 }
 
 const calculator = Calculator();
