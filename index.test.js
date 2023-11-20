@@ -41,3 +41,15 @@ test("multiply two numbers", () => {
 test("divide two numbers", () => {
   expect(calculator.divide(4, 2)).toBe(2);
 });
+
+test("shift three letters", () => {
+  expect(caesarCipher("Shift by three")).toMatch(/Vkliw eb wkuhh/);
+});
+
+test("shift z by three", () => {
+  expect(caesarCipher("z")).toMatch(/c/);
+});
+
+test("shift by three with decimal", () => {
+  expect(caesarCipher("Shift by three.")).toMatch(/Vkliw eb wkuhh./);
+});
