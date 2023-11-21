@@ -1,4 +1,11 @@
-import { sum, capitalize, reverseStr, calculator } from "./index.js";
+import {
+  sum,
+  capitalize,
+  reverseStr,
+  calculator,
+  caesarCipher,
+  nextChar,
+} from "./index.js";
 
 test("adds 1 + 2 to equal 3", () => {
   expect(sum(1, 2)).toBe(3);
@@ -43,6 +50,14 @@ test("divide two numbers", () => {
 });
 
 test("shift three letters", () => {
+  expect(nextChar("b")).toMatch(/e/);
+});
+
+test("shift word three letters", () => {
+  expect(caesarCipher("shift")).toMatch(/vkliw/);
+});
+
+test("shift three letters of multiple words", () => {
   expect(caesarCipher("Shift by three")).toMatch(/Vkliw eb wkuhh/);
 });
 
