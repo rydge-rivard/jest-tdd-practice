@@ -6,6 +6,7 @@ export {
   caesarCipher,
   nextChar,
   analyzeArray,
+  checkNumbers,
 };
 
 function sum(a, b) {
@@ -78,10 +79,32 @@ function charExceptions(c) {
   } else return c;
 }
 
-function analyzeArray(arr) {}
+function analyzeArray(arr) {
+  if (checkNumbers(arr) === false) {
+    return "Array must only contain numbers";
+  }
+  return BasicData(avgArr(arr), Math.min(...arr), Math.max(...arr), arr.length);
+}
 
 function BasicData(average, min, max, length) {
   return { average, min, max, length };
 }
 
 const data = [1, 8, 3, 4, 2, 6];
+
+function avgArr(arr) {
+  let sum = 0;
+  arr.forEach((element) => {
+    sum = sum + element;
+  });
+  return sum / arr.length;
+}
+
+function checkNumbers(arr) {
+  return arr.every((element) => {
+    if (typeof element !== "number") {
+      return false;
+    }
+    return true;
+  });
+}

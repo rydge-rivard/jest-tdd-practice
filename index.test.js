@@ -6,6 +6,7 @@ import {
   caesarCipher,
   nextChar,
   analyzeArray,
+  checkNumbers,
 } from "./index.js";
 
 test("adds 1 + 2 to equal 3", () => {
@@ -68,6 +69,10 @@ test("shift z by three", () => {
 
 test("shift by three with decimal", () => {
   expect(caesarCipher("Shift by three.")).toMatch(/Vkliw eb wkuhh./);
+});
+
+test("test array is only numbers", () => {
+  expect(checkNumbers([1, "pranked", 3, 4, 2, 6])).toEqual(false);
 });
 
 test("take array and return obj with average", () => {
