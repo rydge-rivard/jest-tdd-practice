@@ -1,4 +1,12 @@
-export { sum, capitalize, reverseStr, calculator, caesarCipher, nextChar };
+export {
+  sum,
+  capitalize,
+  reverseStr,
+  calculator,
+  caesarCipher,
+  nextChar,
+  analyzeArray,
+};
 
 function sum(a, b) {
   return a + b;
@@ -70,10 +78,10 @@ function charExceptions(c) {
   } else return c;
 }
 
-caesarCipher("Shift by three");
+function analyzeArray(arr) {}
 
-console.log(
-  caesarCipher(
-    "Hello, this is a super secret message. Tell nobody and use a caesar cipher to decode. Godspeed."
-  )
-);
+function BasicData(average, min, max, length) {
+  return { average, min, max, length };
+}
+
+const data = [1, 8, 3, 4, 2, 6];

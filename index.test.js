@@ -5,6 +5,7 @@ import {
   calculator,
   caesarCipher,
   nextChar,
+  analyzeArray,
 } from "./index.js";
 
 test("adds 1 + 2 to equal 3", () => {
@@ -67,4 +68,29 @@ test("shift z by three", () => {
 
 test("shift by three with decimal", () => {
   expect(caesarCipher("Shift by three.")).toMatch(/Vkliw eb wkuhh./);
+});
+
+test("take array and return obj with average", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({ average: 4 });
+});
+
+test("take array and return obj with min", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({ min: 1 });
+});
+
+test("take array and return obj with max", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({ max: 8 });
+});
+
+test("take array and return obj with length", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({ length: 6 });
+});
+
+test("take array and return obj with avg, min, max, and length", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });
